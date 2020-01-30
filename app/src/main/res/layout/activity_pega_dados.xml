@@ -1,0 +1,199 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    tools:context=".activity.PegaDadosActivity">
+
+
+    <TextView
+        style="@style/TituloTextView"
+        android:text="Cadastro" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/CamposTextView"
+                android:layout_marginTop="10dp"
+                android:text="Valor" />
+
+            <TextView
+                style="@style/CamposTextView"
+                android:layout_marginTop="10dp"
+                android:text="Vencimento" />
+
+            <TextView
+                style="@style/CamposTextView"
+                android:layout_marginTop="10dp"
+                android:text="Pagamento" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/valorPegaDados"
+                style="@style/CamposHint"
+                android:inputType="numberDecimal"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/dataVencimentoPegaDados"
+                style="@style/CamposHint"
+                android:inputType="date"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/dataPagamentoPegaDados"
+                style="@style/CamposHint"
+                android:inputType="date"
+                android:layout_marginRight="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/TituloTextView"
+        android:text="Juros" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/jurosPegaDados"
+                style="@style/CamposHint"
+                android:layout_marginLeft="10dp"
+                android:hint="Informe o valor do juros"
+                android:textColorHint="@color/corBranco" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/diaRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/mesRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Dia" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Mes" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/TituloTextView"
+        android:text="Multa" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/multaPegaDados"
+                style="@style/CamposHint"
+                android:layout_marginLeft="10dp"
+                android:hint="Informe o valor da multa"
+                android:textColorHint="@color/corBranco" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/dinheiroRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="R$" />
+
+                <RadioButton
+                    android:id="@+id/porcentagemRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="%" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/limparButtonPegaDados"
+            style="@style/BotaoStyle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:text="Limpar" />
+
+        <Button
+            android:id="@+id/salvarButtonPegaDados"
+            style="@style/BotaoStyle"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="10dp"
+            android:text="Salvar" />
+
+    </LinearLayout>
+
+</LinearLayout>
